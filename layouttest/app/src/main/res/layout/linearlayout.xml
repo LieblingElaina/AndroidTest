@@ -1,30 +1,120 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF"
     android:orientation="horizontal"
-    android:paddingLeft="16dp"
-    android:paddingRight="16dp">
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp"
+    android:rotation="0"
+    android:rotationX="0"
+    android:rotationY="0">
 
-    <EditText
-        android:layout_width="10dp"
+    <LinearLayout
+        android:layout_width="95dp"
         android:layout_height="wrap_content"
-        android:hint="subject" />
+        android:orientation="vertical">
 
-    <EditText
-        android:layout_width="146dp"
+        <TextView
+            android:layout_width="85dp"
+            android:layout_height="180dp"
+            android:background="#FFFFFF"
+            android:backgroundTint="#FFFFFF"
+            android:text="One,One" />
+
+        <TextView
+            android:layout_width="85dp"
+            android:layout_height="245dp"
+            android:text="One,Two" />
+
+        <TextView
+            android:layout_width="85dp"
+            android:layout_height="180dp"
+            android:text="One,Three" />
+
+        <TextView
+            android:layout_width="85dp"
+            android:layout_height="180dp"
+            android:text="One,Four" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="95dp"
         android:layout_height="wrap_content"
-        android:hint="to" />
+        android:orientation="vertical">
 
-    <EditText
-        android:layout_width="10dp"
+        <TextView
+            android:layout_width="85dp"
+            android:layout_height="180dp"
+            android:text="Two,One" />
+
+        <TextView
+            android:layout_width="85dp"
+            android:layout_height="245dp"
+            android:text="Two,Two" />
+
+        <TextView
+            android:layout_width="85dp"
+            android:layout_height="180dp"
+            android:text="Two,Three" />
+
+        <TextView
+            android:layout_width="85dp"
+            android:layout_height="180dp"
+            android:text="Two,Four" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="95dp"
         android:layout_height="wrap_content"
-        android:gravity="top"
-        android:hint="message" />
+        android:orientation="vertical">
 
-    <EditText
-        android:layout_width="189dp"
-        android:layout_height="74dp"
-        android:gravity="top"
-        android:text="send" />
+        <TextView
+            android:layout_width="85dp"
+            android:layout_height="205dp"
+            android:text="Three,One" />
+
+        <TextView
+            android:layout_width="85dp"
+            android:layout_height="170dp"
+            android:text="Three,Two" />
+
+        <TextView
+            android:layout_width="85dp"
+            android:layout_height="205dp"
+            android:text="Three,Three" />
+
+        <TextView
+            android:layout_width="85dp"
+            android:layout_height="205dp"
+            android:text="Three,Four" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="85dp"
+            android:layout_height="180dp"
+            android:text="Four,One" />
+
+        <TextView
+            android:layout_width="85dp"
+            android:layout_height="245dp"
+            android:text="Four,Two" />
+
+        <TextView
+            android:layout_width="85dp"
+            android:layout_height="180dp"
+            android:text="Four,Three" />
+
+        <TextView
+            android:layout_width="85dp"
+            android:layout_height="180dp"
+            android:text="Four,Four" />
+    </LinearLayout>
+
+
 </LinearLayout>
