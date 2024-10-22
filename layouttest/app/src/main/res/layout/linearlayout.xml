@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
     android:background="#FFFFFF"
     android:orientation="horizontal"
     android:paddingLeft="12dp"
     android:paddingRight="12dp"
     android:rotation="0"
     android:rotationX="0"
-    android:rotationY="0">
+    android:rotationY="0"
+    android:layout_height="wrap_content">
 
     <LinearLayout
         android:layout_width="95dp"
@@ -17,24 +17,24 @@
 
         <TextView
             android:layout_width="85dp"
-            android:layout_height="180dp"
+            android:layout_height="165dp"
             android:background="#FFFFFF"
             android:backgroundTint="#FFFFFF"
             android:text="One,One" />
 
         <TextView
             android:layout_width="85dp"
-            android:layout_height="245dp"
+            android:layout_height="235dp"
             android:text="One,Two" />
 
         <TextView
             android:layout_width="85dp"
-            android:layout_height="180dp"
+            android:layout_height="165dp"
             android:text="One,Three" />
 
         <TextView
             android:layout_width="85dp"
-            android:layout_height="180dp"
+            android:layout_height="165dp"
             android:text="One,Four" />
     </LinearLayout>
 
@@ -45,22 +45,22 @@
 
         <TextView
             android:layout_width="85dp"
-            android:layout_height="180dp"
+            android:layout_height="165dp"
             android:text="Two,One" />
 
         <TextView
             android:layout_width="85dp"
-            android:layout_height="245dp"
+            android:layout_height="235dp"
             android:text="Two,Two" />
 
         <TextView
             android:layout_width="85dp"
-            android:layout_height="180dp"
+            android:layout_height="165dp"
             android:text="Two,Three" />
 
         <TextView
             android:layout_width="85dp"
-            android:layout_height="180dp"
+            android:layout_height="165dp"
             android:text="Two,Four" />
     </LinearLayout>
 
@@ -71,22 +71,22 @@
 
         <TextView
             android:layout_width="85dp"
-            android:layout_height="205dp"
+            android:layout_height="195dp"
             android:text="Three,One" />
 
         <TextView
             android:layout_width="85dp"
-            android:layout_height="170dp"
+            android:layout_height="145dp"
             android:text="Three,Two" />
 
         <TextView
             android:layout_width="85dp"
-            android:layout_height="205dp"
+            android:layout_height="195dp"
             android:text="Three,Three" />
 
         <TextView
             android:layout_width="85dp"
-            android:layout_height="205dp"
+            android:layout_height="195dp"
             android:text="Three,Four" />
     </LinearLayout>
 
@@ -97,22 +97,22 @@
 
         <TextView
             android:layout_width="85dp"
-            android:layout_height="180dp"
+            android:layout_height="165dp"
             android:text="Four,One" />
 
         <TextView
             android:layout_width="85dp"
-            android:layout_height="245dp"
+            android:layout_height="235dp"
             android:text="Four,Two" />
 
         <TextView
             android:layout_width="85dp"
-            android:layout_height="180dp"
+            android:layout_height="165dp"
             android:text="Four,Three" />
 
         <TextView
             android:layout_width="85dp"
-            android:layout_height="180dp"
+            android:layout_height="165dp"
             android:text="Four,Four" />
     </LinearLayout>
 
