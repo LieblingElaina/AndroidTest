@@ -30,6 +30,8 @@
         <TextView
             android:layout_width="85dp"
             android:layout_height="165dp"
+            android:background="#FFFFFF"
+            android:backgroundTint="#FFFFFF"
             android:text="One,Three" />
 
         <TextView
