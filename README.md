@@ -54,3 +54,168 @@ private static final String[] PROJECTION = new String[] {
         NotePad.Notes.COLUMN_NAME_MODIFICATION_DATE,//修改时间
 };
 ```
+
+通过Cursor读出
+
+```java
+        Cursor cursor = managedQuery(
+                getIntent().getData(),            // Use the default content URI for the provider.
+                PROJECTION,                       // Return the note ID and title for each note.
+                null,                             // No where clause, return all records.
+                null,                             // No where clause, therefore no where column values.
+                NotePad.Notes.DEFAULT_SORT_ORDER  // Use the default sort order.
+        );
+```
+
+通过SimpleCursorAdapter装填
+```java
+// Creates the backing adapter for the ListView.
+SimpleCursorAdapter adapter
+    = new SimpleCursorAdapter(
+              this,                             // The Context for the ListView
+              R.layout.noteslist_item,          // Points to the XML for a list item
+              cursor,                           // The cursor to get items from
+              dataColumns,
+              viewIDs
+      );
+
+// Sets the ListView's adapter to be the cursor adapter that was just created.
+setListAdapter(adapter);
+```
+
+插入时间，在NotePadProvider.java中的insert方法和NoteEditor.java中的updateNote方法中实现，前者为创建笔记的时间，后者为修改笔记更新的时间
+```java
+    public Uri insert(Uri uri, ContentValues initialValues) {
+
+        // Validates the incoming URI. Only the full provider URI is allowed for inserts.
+        if (sUriMatcher.match(uri) != NOTES) {
+            throw new IllegalArgumentException("Unknown URI " + uri);
+        }
+
+        // A map to hold the new record's values.
+        ContentValues values ;
+
+        // If the incoming values map is not null, uses it for the new values.
+        if (initialValues != null) {
+            values = new ContentValues(initialValues);
+
+        } else {
+            // Otherwise, create a new value map
+            values = new ContentValues();
+        }
+
+        // Gets the current system time in milliseconds
+        Long now = Long.valueOf(System.currentTimeMillis());
+
+        // If the values map doesn't contain the creation date, sets the value to the current time.
+        if (values.containsKey(NotePad.Notes.COLUMN_NAME_CREATE_DATE) == false) {
+            values.put(NotePad.Notes.COLUMN_NAME_CREATE_DATE, now);
+        }
+
+        // If the values map doesn't contain the modification date, sets the value to the current
+        // time.
+        if (values.containsKey(NotePad.Notes.COLUMN_NAME_MODIFICATION_DATE) == false) {
+            values.put(NotePad.Notes.COLUMN_NAME_MODIFICATION_DATE, now);
+        }
+
+        // If the values map doesn't contain a title, sets the value to the default title.
+        if (values.containsKey(NotePad.Notes.COLUMN_NAME_TITLE) == false) {
+            Resources r = Resources.getSystem();
+            values.put(NotePad.Notes.COLUMN_NAME_TITLE, r.getString(android.R.string.untitled));
+        }
+
+        // If the values map doesn't contain note text, sets the value to an empty string.
+        if (values.containsKey(NotePad.Notes.COLUMN_NAME_NOTE) == false) {
+            values.put(NotePad.Notes.COLUMN_NAME_NOTE, "");
+        }
+        values.put(NotePad.Notes.COLUMN_NAME_TIMESTAMP, now);
+
+        // Opens the database object in "write" mode.
+        SQLiteDatabase db = mOpenHelper.getWritableDatabase();
+
+        // Performs the insert and returns the ID of the new note.
+        long rowId = db.insert(
+            NotePad.Notes.TABLE_NAME,        // The table to insert into.
+            null,  // A hack, SQLite sets this column value to null
+                                             // if values is empty.
+            values                           // A map of column names, and the values to insert
+                                             // into the columns.
+        );
+
+        // If the insert succeeded, the row ID exists.
+        if (rowId > 0) {
+            // Creates a URI with the note ID pattern and the new row ID appended to it.
+            Uri noteUri = ContentUris.withAppendedId(NotePad.Notes.CONTENT_ID_URI_BASE, rowId);
+
+            // Notifies observers registered against this provider that the data changed.
+            getContext().getContentResolver().notifyChange(noteUri, null);
+            return noteUri;
+        }
+
+        // If the insert didn't succeed, then the rowID is <= 0. Throws an exception.
+        throw new SQLException("Failed to insert row into " + uri);
+    }
+```
+```java
+    private final void updateNote(String text, String title) {
+
+        // Sets up a map to contain values to be updated in the provider.
+        ContentValues values = new ContentValues();
+        values.put(NotePad.Notes.COLUMN_NAME_MODIFICATION_DATE, System.currentTimeMillis());
+
+        // If the action is to insert a new note, this creates an initial title for it.
+        if (mState == STATE_INSERT) {
+
+            // If no title was provided as an argument, create one from the note text.
+            if (title == null) {
+  
+                // Get the note's length
+                int length = text.length();
+
+                // Sets the title by getting a substring of the text that is 31 characters long
+                // or the number of characters in the note plus one, whichever is smaller.
+                title = text.substring(0, Math.min(30, length));
+  
+                // If the resulting length is more than 30 characters, chops off any
+                // trailing spaces
+                if (length > 30) {
+                    int lastSpace = title.lastIndexOf(' ');
+                    if (lastSpace > 0) {
+                        title = title.substring(0, lastSpace);
+                    }
+                }
+            }
+            // In the values map, sets the value of the title
+            values.put(NotePad.Notes.COLUMN_NAME_TITLE, title);
+        } else if (title != null) {
+            // In the values map, sets the value of the title
+            values.put(NotePad.Notes.COLUMN_NAME_TITLE, title);
+        }
+
+        // This puts the desired notes text into the map.
+        values.put(NotePad.Notes.COLUMN_NAME_NOTE, text);
+
+        /*
+         * Updates the provider with the new values in the map. The ListView is updated
+         * automatically. The provider sets this up by setting the notification URI for
+         * query Cursor objects to the incoming URI. The content resolver is thus
+         * automatically notified when the Cursor for the URI changes, and the UI is
+         * updated.
+         * Note: This is being done on the UI thread. It will block the thread until the
+         * update completes. In a sample app, going against a simple provider based on a
+         * local database, the block will be momentary, but in a real app you should use
+         * android.content.AsyncQueryHandler or android.os.AsyncTask.
+         */
+        getContentResolver().update(
+                mUri,    // The URI for the record to update.
+                values,  // The map of column names and new values to apply to them.
+                null,    // No selection criteria are used, so no where columns are necessary.
+                null     // No where columns are used, so no where arguments are necessary.
+            );
+    }
+```
+运行效果
+
+![1](https://github.com/user-attachments/assets/3e761410-c712-4417-9ad2-953525db1f21)
+![2](https://github.com/user-attachments/assets/0b1c922b-e2cb-47b2-b9a9-2475fa48236c)
+![3](https://github.com/user-attachments/assets/b4dbee8c-d9d5-4184-b44e-eac621a2ba2a)
