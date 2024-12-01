@@ -350,3 +350,38 @@ public class NoteSearch extends ListActivity implements SearchView.OnQueryTextLi
 ![5](https://github.com/user-attachments/assets/6c8b457f-379e-4b00-936b-8927866b0f26)
 ![6](https://github.com/user-attachments/assets/3ae2d782-ec63-4dfd-afa4-b12aafbfff6e)
 
+## 3.拓展功能：笔记排序（标题排序和日期排序）
+
+在list_options_menu中添加menu_sort
+```xml
+    <item
+        android:id="@+id/menu_sort"
+        android:title="Sort"
+        android:showAsAction="never">
+        <menu>
+            <item
+                android:id="@+id/menu_sort_title"
+                android:title="Sort by Title" />
+            <item
+                android:id="@+id/menu_sort_date"
+                android:title="Sort by Date" />
+        </menu>
+    </item>
+```
+在NoteList的onOptionsItemSelected中添加条件
+```java
+            case R.id.menu_sort_title:
+                sortNotes(NotePad.Notes.COLUMN_NAME_TITLE + " ASC");
+                return true;
+            case R.id.menu_sort_date:
+                sortNotes(NotePad.Notes.COLUMN_NAME_TIMESTAMP + " DESC");
+                return true;
+```
+运行效果
+
+![7](https://github.com/user-attachments/assets/00ac8906-1b3a-46e0-a898-9732d68c4a04)
+![8](https://github.com/user-attachments/assets/bc00960d-59b5-442e-9df0-ba41a264e3be)
+![9](https://github.com/user-attachments/assets/93786a5b-2d6f-4895-b301-8f8c0910a9fc)
+![10](https://github.com/user-attachments/assets/1d10b078-b107-47ae-b166-776f9395b31c)
+
+
