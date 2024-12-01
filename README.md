@@ -219,3 +219,134 @@ setListAdapter(adapter);
 ![1](https://github.com/user-attachments/assets/3e761410-c712-4417-9ad2-953525db1f21)
 ![2](https://github.com/user-attachments/assets/0b1c922b-e2cb-47b2-b9a9-2475fa48236c)
 ![3](https://github.com/user-attachments/assets/b4dbee8c-d9d5-4184-b44e-eac621a2ba2a)
+
+## 2.基础功能：NotePad笔记查询
+
+在应用中添加一个搜索的按钮，点击会弹出一个搜索框，然后在搜索框中输入内容从而实现笔记查询
+首先编辑list_options_menu布局，添加搜索按钮menu_search
+```xml
+    <item
+        android:id="@+id/menu_search"
+        android:icon="@android:drawable/ic_search_category_default"
+        android:showAsAction="always"
+        android:title="search"/>
+    <item
+```
+新建布局文件note_search
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <SearchView
+        android:id="@+id/search_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:iconifiedByDefault="false"
+        android:layout_alignParentTop="true">
+    </SearchView>
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </ListView>
+</LinearLayout>
+```
+在NoteList的onOptionsItemSelected中添加条件
+```java
+ case R.id.menu_search:
+                Intent intent = new Intent(this, NoteSearch.class);
+                this.startActivity(intent);
+                return true;
+```
+NoteSearch方法
+```java
+package com.example.android.notepad;
+
+import android.os.Bundle;
+import android.app.ListActivity;
+import android.content.ContentUris;
+import android.content.Intent;
+import android.database.Cursor;
+import android.net.Uri;
+import android.view.View;
+import android.widget.CursorAdapter;
+import android.widget.ListView;
+import android.widget.SearchView;
+import android.widget.SimpleCursorAdapter;
+
+import com.example.android.notepad.Adapter.NotesAdapter;
+
+public class NoteSearch extends ListActivity implements SearchView.OnQueryTextListener
+{
+    private static final String[] PROJECTION = new String[]
+            {
+            NotePad.Notes._ID, // 0
+            NotePad.Notes.COLUMN_NAME_TITLE, // 1
+            NotePad.Notes.COLUMN_NAME_TIMESTAMP
+
+    };
+    @Override
+    protected void onCreate(Bundle savedInstanceState)
+    {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.note_search);
+        Intent intent = getIntent();
+        if (intent.getData() == null)
+        {
+            intent.setData(NotePad.Notes.CONTENT_URI);
+        }
+        SearchView searchview = (SearchView)findViewById(R.id.search_view);
+        searchview.setOnQueryTextListener(NoteSearch.this);
+    }
+    @Override
+    public boolean onQueryTextSubmit(String query) {
+        return false;
+    }
+    @Override
+    public boolean onQueryTextChange(String newText)
+    {
+        String selection = NotePad.Notes.COLUMN_NAME_TITLE + " Like ? ";
+        String[] selectionArgs = { "%"+newText+"%" };
+        Cursor cursor = managedQuery(
+                getIntent().getData(),
+                PROJECTION,
+                selection,
+                selectionArgs,
+                NotePad.Notes.DEFAULT_SORT_ORDER
+        );
+        String[] dataColumns = { NotePad.Notes.COLUMN_NAME_TITLE ,
+                NotePad.Notes.COLUMN_NAME_TIMESTAMP };
+        int[] viewIDs = { android.R.id.text1 , android.R.id.text2 };
+        NotesAdapter adapter = new NotesAdapter(
+                this,
+                cursor,
+                CursorAdapter.FLAG_REGISTER_CONTENT_OBSERVER
+        );
+        setListAdapter(adapter);
+
+        return true;
+    }
+    @Override
+    protected void onListItemClick(ListView l, View v, int position, long id)
+    {
+
+        Uri uri = ContentUris.withAppendedId(getIntent().getData(), id);
+        String action = getIntent().getAction();
+        if (Intent.ACTION_PICK.equals(action) || Intent.ACTION_GET_CONTENT.equals(action))
+        {
+            setResult(RESULT_OK, new Intent().setData(uri));
+        } else
+        {
+            startActivity(new Intent(Intent.ACTION_EDIT, uri));
+        }
+    }
+}
+```
+运行效果
+
+![4](https://github.com/user-attachments/assets/85ef5d95-3f76-4f0a-8d74-af3481d9d584)
+![5](https://github.com/user-attachments/assets/6c8b457f-379e-4b00-936b-8927866b0f26)
+![6](https://github.com/user-attachments/assets/3ae2d782-ec63-4dfd-afa4-b12aafbfff6e)
+
