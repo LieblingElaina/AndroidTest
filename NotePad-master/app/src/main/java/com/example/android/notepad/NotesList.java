@@ -406,22 +406,6 @@ public class NotesList extends ListActivity
                 // Launch activity to view/edit the currently selected item
                 startActivity(new Intent(Intent.ACTION_EDIT, noteUri));
                 return true;
-//BEGIN_INCLUDE(copy)
-            case R.id.context_copy:
-                // Gets a handle to the clipboard service.
-                ClipboardManager clipboard = (ClipboardManager)
-                        getSystemService(Context.CLIPBOARD_SERVICE);
-
-                // Copies the notes URI to the clipboard. In effect, this copies the note itself
-                clipboard.setPrimaryClip(ClipData.newUri(   // new clipboard item holding a URI
-                        getContentResolver(),               // resolver to retrieve URI info
-                        "Note",                             // label for the clip
-                        noteUri)                            // the URI
-                );
-
-                // Returns to the caller and skips further processing.
-                return true;
-//END_INCLUDE(copy)
             case R.id.context_delete:
 
                 // Deletes the note from the provider by passing in a URI in note ID format.

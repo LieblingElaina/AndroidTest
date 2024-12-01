@@ -1,98 +1,98 @@
 [
     {
-        "merged": "C:\\Users\\zhe\\Desktop\\NotePad-master\\app\\build\\intermediates\\res\\merged\\debug\\menu_editor_options_menu.xml.flat",
-        "source": "C:\\Users\\zhe\\Desktop\\NotePad-master\\app\\src\\main\\res\\menu\\editor_options_menu.xml"
+        "merged": "G:\\AndroidTest\\NotePad-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_menu_revert.png.flat",
+        "source": "G:\\AndroidTest\\NotePad-master\\app\\src\\main\\res\\drawable-hdpi\\ic_menu_revert.png"
     },
     {
-        "merged": "C:\\Users\\zhe\\Desktop\\NotePad-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_menu_compose.png.flat",
-        "source": "C:\\Users\\zhe\\Desktop\\NotePad-master\\app\\src\\main\\res\\drawable\\ic_menu_compose.png"
+        "merged": "G:\\AndroidTest\\NotePad-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_menu_compose.png.flat",
+        "source": "G:\\AndroidTest\\NotePad-master\\app\\src\\main\\res\\drawable\\ic_menu_compose.png"
     },
     {
-        "merged": "C:\\Users\\zhe\\Desktop\\NotePad-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_live_folder_notes.png.flat",
-        "source": "C:\\Users\\zhe\\Desktop\\NotePad-master\\app\\src\\main\\res\\drawable\\live_folder_notes.png"
+        "merged": "G:\\AndroidTest\\NotePad-master\\app\\build\\intermediates\\res\\merged\\debug\\menu_list_context_menu.xml.flat",
+        "source": "G:\\AndroidTest\\NotePad-master\\app\\src\\main\\res\\menu\\list_context_menu.xml"
     },
     {
-        "merged": "C:\\Users\\zhe\\Desktop\\NotePad-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_menu_save.png.flat",
-        "source": "C:\\Users\\zhe\\Desktop\\NotePad-master\\app\\src\\main\\res\\drawable\\ic_menu_save.png"
+        "merged": "G:\\AndroidTest\\NotePad-master\\app\\build\\intermediates\\res\\merged\\debug\\layout_note_search.xml.flat",
+        "source": "G:\\AndroidTest\\NotePad-master\\app\\src\\main\\res\\layout\\note_search.xml"
     },
     {
-        "merged": "C:\\Users\\zhe\\Desktop\\NotePad-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_menu_edit.png.flat",
-        "source": "C:\\Users\\zhe\\Desktop\\NotePad-master\\app\\src\\main\\res\\drawable-hdpi\\ic_menu_edit.png"
+        "merged": "G:\\AndroidTest\\NotePad-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_live_folder_notes.png.flat",
+        "source": "G:\\AndroidTest\\NotePad-master\\app\\src\\main\\res\\drawable-ldpi\\live_folder_notes.png"
     },
     {
-        "merged": "C:\\Users\\zhe\\Desktop\\NotePad-master\\app\\build\\intermediates\\res\\merged\\debug\\layout_note_editor.xml.flat",
-        "source": "C:\\Users\\zhe\\Desktop\\NotePad-master\\app\\src\\main\\res\\layout\\note_editor.xml"
+        "merged": "G:\\AndroidTest\\NotePad-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_live_folder_notes.png.flat",
+        "source": "G:\\AndroidTest\\NotePad-master\\app\\src\\main\\res\\drawable-hdpi\\live_folder_notes.png"
     },
     {
-        "merged": "C:\\Users\\zhe\\Desktop\\NotePad-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_menu_delete.png.flat",
-        "source": "C:\\Users\\zhe\\Desktop\\NotePad-master\\app\\src\\main\\res\\drawable-hdpi\\ic_menu_delete.png"
+        "merged": "G:\\AndroidTest\\NotePad-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_menu_compose.png.flat",
+        "source": "G:\\AndroidTest\\NotePad-master\\app\\src\\main\\res\\drawable-hdpi\\ic_menu_compose.png"
     },
     {
-        "merged": "C:\\Users\\zhe\\Desktop\\NotePad-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_menu_delete.png.flat",
-        "source": "C:\\Users\\zhe\\Desktop\\NotePad-master\\app\\src\\main\\res\\drawable\\ic_menu_delete.png"
+        "merged": "G:\\AndroidTest\\NotePad-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_live_folder_notes.png.flat",
+        "source": "G:\\AndroidTest\\NotePad-master\\app\\src\\main\\res\\drawable\\live_folder_notes.png"
     },
     {
-        "merged": "C:\\Users\\zhe\\Desktop\\NotePad-master\\app\\build\\intermediates\\res\\merged\\debug\\layout_dialog_color_picker.xml.flat",
-        "source": "C:\\Users\\zhe\\Desktop\\NotePad-master\\app\\src\\main\\res\\layout\\dialog_color_picker.xml"
+        "merged": "G:\\AndroidTest\\NotePad-master\\app\\build\\intermediates\\res\\merged\\debug\\layout_note_list.xml.flat",
+        "source": "G:\\AndroidTest\\NotePad-master\\app\\src\\main\\res\\layout\\note_list.xml"
     },
     {
-        "merged": "C:\\Users\\zhe\\Desktop\\NotePad-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_app_notes.png.flat",
-        "source": "C:\\Users\\zhe\\Desktop\\NotePad-master\\app\\src\\main\\res\\drawable-hdpi\\app_notes.png"
+        "merged": "G:\\AndroidTest\\NotePad-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_app_notes.png.flat",
+        "source": "G:\\AndroidTest\\NotePad-master\\app\\src\\main\\res\\drawable\\app_notes.png"
     },
     {
-        "merged": "C:\\Users\\zhe\\Desktop\\NotePad-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_app_notes.png.flat",
-        "source": "C:\\Users\\zhe\\Desktop\\NotePad-master\\app\\src\\main\\res\\drawable\\app_notes.png"
+        "merged": "G:\\AndroidTest\\NotePad-master\\app\\build\\intermediates\\res\\merged\\debug\\layout_dialog_color_picker.xml.flat",
+        "source": "G:\\AndroidTest\\NotePad-master\\app\\src\\main\\res\\layout\\dialog_color_picker.xml"
     },
     {
-        "merged": "C:\\Users\\zhe\\Desktop\\NotePad-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_menu_revert.png.flat",
-        "source": "C:\\Users\\zhe\\Desktop\\NotePad-master\\app\\src\\main\\res\\drawable-hdpi\\ic_menu_revert.png"
+        "merged": "G:\\AndroidTest\\NotePad-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_menu_revert.png.flat",
+        "source": "G:\\AndroidTest\\NotePad-master\\app\\src\\main\\res\\drawable\\ic_menu_revert.png"
     },
     {
-        "merged": "C:\\Users\\zhe\\Desktop\\NotePad-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_app_notes.png.flat",
-        "source": "C:\\Users\\zhe\\Desktop\\NotePad-master\\app\\src\\main\\res\\drawable-ldpi\\app_notes.png"
+        "merged": "G:\\AndroidTest\\NotePad-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_menu_edit.png.flat",
+        "source": "G:\\AndroidTest\\NotePad-master\\app\\src\\main\\res\\drawable-hdpi\\ic_menu_edit.png"
     },
     {
-        "merged": "C:\\Users\\zhe\\Desktop\\NotePad-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_menu_compose.png.flat",
-        "source": "C:\\Users\\zhe\\Desktop\\NotePad-master\\app\\src\\main\\res\\drawable-hdpi\\ic_menu_compose.png"
+        "merged": "G:\\AndroidTest\\NotePad-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_menu_save.png.flat",
+        "source": "G:\\AndroidTest\\NotePad-master\\app\\src\\main\\res\\drawable\\ic_menu_save.png"
     },
     {
-        "merged": "C:\\Users\\zhe\\Desktop\\NotePad-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_menu_save.png.flat",
-        "source": "C:\\Users\\zhe\\Desktop\\NotePad-master\\app\\src\\main\\res\\drawable-hdpi\\ic_menu_save.png"
+        "merged": "G:\\AndroidTest\\NotePad-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_menu_save.png.flat",
+        "source": "G:\\AndroidTest\\NotePad-master\\app\\src\\main\\res\\drawable-hdpi\\ic_menu_save.png"
     },
     {
-        "merged": "C:\\Users\\zhe\\Desktop\\NotePad-master\\app\\build\\intermediates\\res\\merged\\debug\\menu_list_options_menu.xml.flat",
-        "source": "C:\\Users\\zhe\\Desktop\\NotePad-master\\app\\src\\main\\res\\menu\\list_options_menu.xml"
+        "merged": "G:\\AndroidTest\\NotePad-master\\app\\build\\intermediates\\res\\merged\\debug\\menu_list_options_menu.xml.flat",
+        "source": "G:\\AndroidTest\\NotePad-master\\app\\src\\main\\res\\menu\\list_options_menu.xml"
     },
     {
-        "merged": "C:\\Users\\zhe\\Desktop\\NotePad-master\\app\\build\\intermediates\\res\\merged\\debug\\layout_noteslist_item.xml.flat",
-        "source": "C:\\Users\\zhe\\Desktop\\NotePad-master\\app\\src\\main\\res\\layout\\noteslist_item.xml"
+        "merged": "G:\\AndroidTest\\NotePad-master\\app\\build\\intermediates\\res\\merged\\debug\\layout_title_editor.xml.flat",
+        "source": "G:\\AndroidTest\\NotePad-master\\app\\src\\main\\res\\layout\\title_editor.xml"
     },
     {
-        "merged": "C:\\Users\\zhe\\Desktop\\NotePad-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_menu_revert.png.flat",
-        "source": "C:\\Users\\zhe\\Desktop\\NotePad-master\\app\\src\\main\\res\\drawable\\ic_menu_revert.png"
+        "merged": "G:\\AndroidTest\\NotePad-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_menu_delete.png.flat",
+        "source": "G:\\AndroidTest\\NotePad-master\\app\\src\\main\\res\\drawable-hdpi\\ic_menu_delete.png"
     },
     {
-        "merged": "C:\\Users\\zhe\\Desktop\\NotePad-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_live_folder_notes.png.flat",
-        "source": "C:\\Users\\zhe\\Desktop\\NotePad-master\\app\\src\\main\\res\\drawable-hdpi\\live_folder_notes.png"
+        "merged": "G:\\AndroidTest\\NotePad-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_app_notes.png.flat",
+        "source": "G:\\AndroidTest\\NotePad-master\\app\\src\\main\\res\\drawable-hdpi\\app_notes.png"
     },
     {
-        "merged": "C:\\Users\\zhe\\Desktop\\NotePad-master\\app\\build\\intermediates\\res\\merged\\debug\\layout_note_search.xml.flat",
-        "source": "C:\\Users\\zhe\\Desktop\\NotePad-master\\app\\src\\main\\res\\layout\\note_search.xml"
+        "merged": "G:\\AndroidTest\\NotePad-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_app_notes.png.flat",
+        "source": "G:\\AndroidTest\\NotePad-master\\app\\src\\main\\res\\drawable-ldpi\\app_notes.png"
     },
     {
-        "merged": "C:\\Users\\zhe\\Desktop\\NotePad-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_menu_edit.png.flat",
-        "source": "C:\\Users\\zhe\\Desktop\\NotePad-master\\app\\src\\main\\res\\drawable\\ic_menu_edit.png"
+        "merged": "G:\\AndroidTest\\NotePad-master\\app\\build\\intermediates\\res\\merged\\debug\\layout_note_editor.xml.flat",
+        "source": "G:\\AndroidTest\\NotePad-master\\app\\src\\main\\res\\layout\\note_editor.xml"
     },
     {
-        "merged": "C:\\Users\\zhe\\Desktop\\NotePad-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_live_folder_notes.png.flat",
-        "source": "C:\\Users\\zhe\\Desktop\\NotePad-master\\app\\src\\main\\res\\drawable-ldpi\\live_folder_notes.png"
+        "merged": "G:\\AndroidTest\\NotePad-master\\app\\build\\intermediates\\res\\merged\\debug\\menu_editor_options_menu.xml.flat",
+        "source": "G:\\AndroidTest\\NotePad-master\\app\\src\\main\\res\\menu\\editor_options_menu.xml"
     },
     {
-        "merged": "C:\\Users\\zhe\\Desktop\\NotePad-master\\app\\build\\intermediates\\res\\merged\\debug\\layout_title_editor.xml.flat",
-        "source": "C:\\Users\\zhe\\Desktop\\NotePad-master\\app\\src\\main\\res\\layout\\title_editor.xml"
+        "merged": "G:\\AndroidTest\\NotePad-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_menu_edit.png.flat",
+        "source": "G:\\AndroidTest\\NotePad-master\\app\\src\\main\\res\\drawable\\ic_menu_edit.png"
     },
     {
-        "merged": "C:\\Users\\zhe\\Desktop\\NotePad-master\\app\\build\\intermediates\\res\\merged\\debug\\menu_list_context_menu.xml.flat",
-        "source": "C:\\Users\\zhe\\Desktop\\NotePad-master\\app\\src\\main\\res\\menu\\list_context_menu.xml"
+        "merged": "G:\\AndroidTest\\NotePad-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_menu_delete.png.flat",
+        "source": "G:\\AndroidTest\\NotePad-master\\app\\src\\main\\res\\drawable\\ic_menu_delete.png"
     }
 ]

@@ -19,28 +19,27 @@ public final class R {
   }
   public static final class id {
     public static final int color_grid=0x7f020000;
-    public static final int context_copy=0x7f020001;
-    public static final int context_delete=0x7f020002;
-    public static final int context_open=0x7f020003;
-    public static final int menu_add=0x7f020004;
-    public static final int menu_change_background=0x7f020005;
-    public static final int menu_delete=0x7f020006;
-    public static final int menu_revert=0x7f020007;
-    public static final int menu_save=0x7f020008;
-    public static final int menu_search=0x7f020009;
-    public static final int menu_sort=0x7f02000a;
-    public static final int menu_sort_date=0x7f02000b;
-    public static final int menu_sort_title=0x7f02000c;
-    public static final int note=0x7f02000d;
-    public static final int ok=0x7f02000e;
-    public static final int search_view=0x7f02000f;
-    public static final int title=0x7f020010;
+    public static final int context_delete=0x7f020001;
+    public static final int context_open=0x7f020002;
+    public static final int menu_add=0x7f020003;
+    public static final int menu_change_background=0x7f020004;
+    public static final int menu_delete=0x7f020005;
+    public static final int menu_revert=0x7f020006;
+    public static final int menu_save=0x7f020007;
+    public static final int menu_search=0x7f020008;
+    public static final int menu_sort=0x7f020009;
+    public static final int menu_sort_date=0x7f02000a;
+    public static final int menu_sort_title=0x7f02000b;
+    public static final int note=0x7f02000c;
+    public static final int ok=0x7f02000d;
+    public static final int search_view=0x7f02000e;
+    public static final int title=0x7f02000f;
   }
   public static final class layout {
     public static final int dialog_color_picker=0x7f030000;
     public static final int note_editor=0x7f030001;
-    public static final int note_search=0x7f030002;
-    public static final int noteslist_item=0x7f030003;
+    public static final int note_list=0x7f030002;
+    public static final int note_search=0x7f030003;
     public static final int title_editor=0x7f030004;
   }
   public static final class menu {
