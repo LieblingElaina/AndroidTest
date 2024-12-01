@@ -217,7 +217,9 @@ setListAdapter(adapter);
 运行效果
 
 ![1](https://github.com/user-attachments/assets/3e761410-c712-4417-9ad2-953525db1f21)
+
 ![2](https://github.com/user-attachments/assets/0b1c922b-e2cb-47b2-b9a9-2475fa48236c)
+
 ![3](https://github.com/user-attachments/assets/b4dbee8c-d9d5-4184-b44e-eac621a2ba2a)
 
 ## 2.基础功能：NotePad笔记查询
@@ -347,7 +349,9 @@ public class NoteSearch extends ListActivity implements SearchView.OnQueryTextLi
 运行效果
 
 ![4](https://github.com/user-attachments/assets/85ef5d95-3f76-4f0a-8d74-af3481d9d584)
+
 ![5](https://github.com/user-attachments/assets/6c8b457f-379e-4b00-936b-8927866b0f26)
+
 ![6](https://github.com/user-attachments/assets/3ae2d782-ec63-4dfd-afa4-b12aafbfff6e)
 
 ## 3.拓展功能：笔记排序（标题排序和日期排序）
@@ -380,8 +384,125 @@ public class NoteSearch extends ListActivity implements SearchView.OnQueryTextLi
 运行效果
 
 ![7](https://github.com/user-attachments/assets/00ac8906-1b3a-46e0-a898-9732d68c4a04)
+
 ![8](https://github.com/user-attachments/assets/bc00960d-59b5-442e-9df0-ba41a264e3be)
+
 ![9](https://github.com/user-attachments/assets/93786a5b-2d6f-4895-b301-8f8c0910a9fc)
+
 ![10](https://github.com/user-attachments/assets/1d10b078-b107-47ae-b166-776f9395b31c)
+
+## 4.拓展功能：笔记背景更换
+
+在editor_options_menu添加menu_change_background，添加dialog_color_picker布局
+```xml
+    <item
+        android:id="@+id/menu_change_background"
+        android:title="Select Background Color"
+        android:showAsAction="never"/>
+```
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/color_grid"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/black"
+    android:columnCount="6"
+    android:padding="16dp"
+    android:translationX="0dp"
+    android:translationY="0dp">
+
+    <View
+        android:layout_width="40dp"
+        android:layout_height="50dp"
+        android:layout_row="0"
+        android:layout_column="0"
+        android:layout_margin="8dp"
+        android:background="#FFFFFF"
+        android:clickable="true"
+        android:tag="#FFFFFF" />
+
+    <View
+        android:layout_width="40dp"
+        android:layout_height="50dp"
+        android:layout_margin="8dp"
+        android:background="#FFFF99"
+        android:clickable="true"
+        android:tag="#FFFF99" />
+
+    <View
+        android:layout_width="40dp"
+        android:layout_height="50dp"
+        android:layout_margin="8dp"
+        android:background="#FFC0CB"
+        android:clickable="true"
+        android:tag="#FFC0CB" />
+
+    <View
+        android:layout_width="40dp"
+        android:layout_height="50dp"
+        android:layout_margin="8dp"
+        android:background="#ADD8E6"
+        android:clickable="true"
+        android:tag="#ADD8E6" />
+
+    <View
+        android:layout_width="40dp"
+        android:layout_height="50dp"
+        android:layout_margin="8dp"
+        android:background="#FFF0F5"
+        android:clickable="true"
+        android:tag="#FFF0F5" />
+
+    <View
+        android:layout_width="40dp"
+        android:layout_height="50dp"
+        android:layout_margin="8dp"
+        android:background="#BDFCC9"
+        android:clickable="true"
+        android:tag="#BDFCC9" />
+
+</GridLayout>
+```
+在NoteEditor的onOptionsItemSelected添加条件
+```java
+           case R.id.menu_change_background:
+                showBackgroundColorPicker();
+                break;
+```
+showBackgroundColorPicker方法，用于更换笔记背景
+```java
+    private void showBackgroundColorPicker() {
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Select Background Color");
+        View colorPickerView = getLayoutInflater().inflate(R.layout.dialog_color_picker, null);
+        builder.setView(colorPickerView);
+
+        AlertDialog dialog = builder.create();
+
+        ColorClickListener clickListener = new ColorClickListener(dialog);
+
+        @SuppressLint({"MissingInflatedId", "LocalSuppress"})
+        ViewGroup gridLayout = colorPickerView.findViewById(R.id.color_grid);
+        for (int i = 0; i < gridLayout.getChildCount(); i++)
+        {
+            View colorView = gridLayout.getChildAt(i);
+            colorView.setOnClickListener(clickListener);
+        }
+
+
+        dialog.show();
+    }
+```
+运行效果
+
+![11](https://github.com/user-attachments/assets/8f612cdc-22d9-41fc-b25c-d45ec8d3c180)
+
+![12](https://github.com/user-attachments/assets/9199a46b-a133-4f53-acb8-0670e5d30cbf)
+
+![13](https://github.com/user-attachments/assets/71c15df8-8b65-4391-9bb4-a65ee8dbca17)
+
 
 
